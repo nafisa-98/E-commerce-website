@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1718" />
+    <meta
+      name="description"
+      content="Discover everyday essentials and standout tech at Lime & Tide."
+    />
+    <title>Lime & Tide — Everyday, upgraded</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="loader" id="loader" role="status" aria-live="polite">
+      <div class="loader-mark"><i class="bi bi-bag-heart-fill"></i></div>
+      <p class="loader-brand">lime<span>&</span>tide</p>
+      <div class="loader-track"><span></span></div>
+      <p class="loader-message" id="loaderMessage">
+        Getting the good stuff ready…
+      </p>
+    </div>
+
+    <div class="offline-banner" id="offlineBanner" role="alert" hidden>
+      <i class="bi bi-wifi-off"></i>
+      <div>
+        <strong>You're offline</strong
+        ><span>Check your internet connection, then try again.</span>
+      </div>
+      <button class="icon-button" id="retryButton" aria-label="Retry loading">
+        <i class="bi bi-arrow-clockwise"></i>
+      </button>
+    </div>
+
+    <div class="site-shell" id="siteShell" hidden>
+      <div class="announcement">
+        <span>GOOD FINDS. BETTER EVERYDAY.</span
+        ><span class="announcement-right"
+          >Free shipping on orders over $75 <i class="bi bi-arrow-up-right"></i
+        ></span>
+      </div>
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Lime and Tide home"
+          ><span class="brand-icon"><i class="bi bi-bag-heart-fill"></i></span
+          ><span
+            >lime<span class="brand-amp">&</span>tide<small
+              >GOODS FOR YOUR EVERYDAY</small
+            ></span
+          ></a
+        >
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#shop">Shop all</a
+          ><a href="#shop" data-category-link="electronics">Tech</a
+          ><a href="#shop" data-category-link="jewelery">Accessories</a
+          ><a href="#about">Our story</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="icon-button theme-toggle"
+            id="themeToggle"
+            aria-label="Switch to light theme"
+          >
+            <i class="bi bi-sun"></i>
+          </button>
+          <button
+            class="icon-button cart-shortcut"
+            id="cartShortcut"
+            aria-label="Open buying list"
+          >
+            <i class="bi bi-bag"></i
+            ><span class="cart-count" id="headerCartCount">0</span>
+          </button>
+          <button
+            class="menu-toggle icon-button"
+            id="menuToggle"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span> YOUR DAILY UPGRADE
+            </p>
+            <h1>Good things.<br />Great <span>energy.</span></h1>
+            <p class="hero-description">
+              Thoughtful finds for the way you live, work, and play. Meet your
+              next everyday favorite.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#shop"
+                >Explore the collection <i class="bi bi-arrow-up-right"></i></a
+              ><span class="hero-note"
+                ><i class="bi bi-stars"></i> A little better, every day</span
+              >
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>01<span>.</span></strong
+                ><small>Find your thing</small>
+              </div>
+              <div>
+                <strong>02<span>.</span></strong
+                ><small>Make it yours</small>
+              </div>
+              <div>
+                <strong>03<span>.</span></strong
+                ><small>Love it daily</small>
+              </div>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Featured shopping collection">
+            <div class="art-shape shape-one"></div>
+            <div class="art-shape shape-two"></div>
+            <div class="hero-sticker">
+              <i class="bi bi-lightning-charge-fill"></i
+              ><span>GOOD<br />CHOICES</span>
+            </div>
+            <div class="hero-product">
+              <img
+                src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+                alt="Featured headphones"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <div class="floating-card">
+              <span class="floating-dot"></span>
+              <div>
+                <strong>Fresh finds</strong
+                ><small>Picked for your everyday</small>
+              </div>
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+            <span class="art-caption">CURATED FOR REAL LIFE / VOL. 01</span>
+          </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Store benefits">
+          <div>
+            <i class="bi bi-box-seam"></i
+            ><span
+              ><strong>Easy delivery</strong
+              ><small>To your doorstep</small></span
+            >
+          </div>
+          <div>
+            <i class="bi bi-shield-check"></i
+            ><span
+              ><strong>Shop with confidence</strong
+              ><small>Secure checkout-ready list</small></span
+            >
+          </div>
+          <div>
+            <i class="bi bi-arrow-repeat"></i
+            ><span
+              ><strong>Simple choices</strong
+              ><small>Browse at your pace</small></span
+            >
+          </div>
+          <div>
+            <i class="bi bi-heart"></i
+            ><span
+              ><strong>Everyday favorites</strong
+              ><small>Useful things, well picked</small></span
+            >
+          </div>
+        </section>
+
+        <section class="shop-section section-wrap" id="shop">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow-line"></span> THE GOOD STUFF
+              </p>
+              <h2>Find your <span>favorite.</span></h2>
+              <p class="section-subtitle">
+                A few good things can change your whole day.
+              </p>
+            </div>
+            <div class="result-note">
+              <span class="result-dot"></span
+              ><span id="resultCount">Loading collection</span>
+            </div>
+          </div>
+          <div class="shop-controls">
+            <div
+              class="category-tabs"
+              id="categoryTabs"
+              role="group"
+              aria-label="Filter products"
+            >
+              <button class="category-tab active" data-category="all">
+                Everything <span>↗</span>
+              </button>
+              <button class="category-tab" data-category="electronics">
+                Tech
+              </button>
+              <button class="category-tab" data-category="jewelery">
+                Accessories
+              </button>
+              <button class="category-tab" data-category="men's clothing">
+                For him
+              </button>
+              <button class="category-tab" data-category="women's clothing">
+                For her
+              </button>
+            </div>
+            <div class="control-right">
+              <label class="search-box"
+                ><i class="bi bi-search"></i
+                ><input
+                  type="search"
+                  id="searchInput"
+                  placeholder="Find something…"
+                  aria-label="Search products"
+                /><kbd>/</kbd></label
+              >
+              <label class="sort-box"
+                ><span class="sr-only">Sort products</span
+                ><select id="sortSelect">
+                  <option value="featured">Sort: Featured</option>
+                  <option value="price-low">Price: Low to high</option>
+                  <option value="price-high">Price: High to low</option>
+                  <option value="rating">Top rated</option></select
+                ><i class="bi bi-chevron-down"></i
+              ></label>
+            </div>
+          </div>
+          <div class="status-message" id="statusMessage" hidden></div>
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+          <div class="load-more-wrap">
+            <button class="button button-outline" id="loadMoreButton" hidden>
+              Load more <i class="bi bi-arrow-down"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="promo section-wrap" id="about">
+          <div class="promo-mark"><i class="bi bi-sun-fill"></i></div>
+          <div>
+            <p class="eyebrow">LESS SCROLL. MORE SOUL.</p>
+            <h2>Make room for<br /><span>the good stuff.</span></h2>
+            <p>
+              We believe shopping should feel simple: discover useful things,
+              choose what you love, and get on with your day.
+            </p>
+          </div>
+          <a class="button button-dark" href="#shop"
+            >Find your next favorite <i class="bi bi-arrow-up-right"></i
+          ></a>
+          <div class="promo-orbit"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="brand footer-brand" href="#"
+          ><span class="brand-icon"><i class="bi bi-bag-heart-fill"></i></span
+          ><span
+            >lime<span class="brand-amp">&</span>tide<small
+              >GOODS FOR YOUR EVERYDAY</small
+            ></span
+          ></a
+        >
+        <p>
+          Good finds for the everyday. © <span id="year"></span> Lime & Tide.
+        </p>
+        <a href="#shop">Back to top <i class="bi bi-arrow-up"></i></a>
+      </footer>
+    </div>
+
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    <aside
+      class="cart-drawer"
+      id="cartDrawer"
+      aria-labelledby="cartTitle"
+      aria-modal="true"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">YOUR PICKS</p>
+          <h2 id="cartTitle">Buying list <span id="drawerCount">(0)</span></h2>
+        </div>
+        <button
+          class="icon-button"
+          id="closeCart"
+          aria-label="Close buying list"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">
+        <div class="empty-icon"><i class="bi bi-bag"></i></div>
+        <h3>Your list is looking light.</h3>
+        <p>
+          Spot something you love? Add it here and keep all your picks together.
+        </p>
+        <button class="button button-primary" id="continueShopping">
+          Explore products <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+      <div class="cart-footer" id="cartFooter" hidden>
+        <div class="cart-total">
+          <span>Estimated total</span><strong id="cartTotal">$0.00</strong>
+        </div>
+        <p>Demo buying list — no payment is collected.</p>
+        <button
+          class="button button-primary checkout-button"
+          id="checkoutButton"
+        >
+          Review your picks <i class="bi bi-arrow-right"></i></button
+        ><button class="clear-cart" id="clearCart">Clear list</button>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <i class="bi bi-check-circle-fill"></i
+      ><span id="toastText">Added to your buying list</span>
+    </div>
+  </body>
+</html>
